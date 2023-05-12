@@ -2,33 +2,13 @@
 
 // [345, 897, 568, 234] -> 2
 
-// Console.WriteLine("Ввндите длину массива: ");
-// int size = Convert.ToInt32(Console.ReadLine());
-// int[] array = new int[size];
-// RandNumberArray(array);
-// DecitionArray(array);
-// PrintArray(array);
+int[] array = new int[5];
 
 
-// Console.WriteLine("Введите число");
-// string str = "234";
-// int sum = 0;
-// for (int i = 0; i < str.Length;i++)
-// {
-//     int number = int.Parse(str[i].ToString());
-//     sum +=number;
-// }
-// Console.WriteLine(sum);
-
-Console.WriteLine("Введите длину массива: ");
-int size = Convert.ToInt32(Console.ReadLine());
-int[] array = new int[size];
-EnterFoo(array);
-EvenFoo(array);
-PrintFoo(array);
 
 void EnterFoo(int[] array)
 {
+
     for (int i = 0; i < array.Length; i++)
     {
         int random = new Random().Next(100, 999);
@@ -37,18 +17,28 @@ void EnterFoo(int[] array)
 
 }
 
-void EvenFoo(int[] array,)
-{
-    
-}
-
 
 void PrintFoo(int[] array)
 {
+
     for (int i = 0; i < array.Length; i++)
-{
-    Console.Write(array[i] + " ");
+    {
+        Console.Write(array[i] + " ");
+
+    }
 
 }
-Console.WriteLine();
+Console.WriteLine("Введите длину массива: ");
+int size1 = Convert.ToInt32(Console.ReadLine());
+int[] array1 = new int[size1];
+EnterFoo(array);
+PrintFoo(array);
+int evenNumber = 0;
+for (int i = 0; i < array1.Length; i++)
+{
+    if (array[i] % 2 == 0)
+    {
+        evenNumber++;
+    }
 }
+Console.Write($"Количество чётных элементов в данном массиве = {evenNumber} ");
